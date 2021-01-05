@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+.form-wrapper {
+}
+
+.input-block {
+  display: flex;
+  flex-direction: column;
+  margin: 9px;
+}
+
+.btn-login {
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  background: linear-gradient(
+    25deg,
+    rgb(8, 3, 41),
+    rgba(16, 7, 75, 0),
+    rgb(72, 61, 139)
+  );
+}
+
+h1 {
+  font-size: 34px;
+  font-weight: 800;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  background-color: blueviolet;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  animation-name: fade;
+  animation-duration: 200ms;
+  overflow: hidden;
+  background-color: darkslateblue;
+  margin: 20px 0;
+  padding: 45px 20px 45px 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.486);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+form .input-block {
+  margin-bottom: 20px;
+}
+
+form .input-block label {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: white;
+  font-weight: bold;
+}
+
+form .input-block input {
+  outline-color: white;
+  color: darkslateblue;
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 7px;
+}
+
+form .input-block:nth-child(1) {
+  animation: come-in 500ms;
+}
+
+form .input-block:nth-child(2) {
+  animation: come-in 500ms;
+  animation-delay: 200ms;
+  animation-fill-mode: backwards;
+}
+
+form .btn-login {
+  animation: come-in 500ms;
+  animation-delay: 600ms;
+  animation-fill-mode: backwards;
+  display: block;
+  background-color: white;
+  color: darkslateblue;
+  font-size: 12px;
+  border: none;
+  padding: 8px;
+  min-width: 120px;
+  border-radius: 25px;
+  margin: auto;
+}
+
+form .btn-login:hover {
+  opacity: 0.9;
+}
+
+@keyframes come-in {
+  from {
+    opacity: 0;
+    transform: translateX(-35%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
